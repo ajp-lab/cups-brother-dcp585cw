@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Docker & Temp
+*.log
+.docker/
+node_modules/
+
+# Brother Drivers (Wir laden diese lieber per Skript im Dockerfile)
+*.deb
+*.rpm
