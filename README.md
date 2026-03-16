@@ -9,7 +9,7 @@ By containerizing the original 32-bit Linux drivers within a CUPS (Common Unix P
 ```mermaid
 graph TD
     A[Mac Studio M4 Max] -->|LAN| B(Docker Container)
-    subgraph "Docker (Ubuntu i386 Emulation)"
+    subgraph "Docker (Ubuntu 22.04 i386)"
     B --> C[CUPS Druckerserver]
     C --> D[Brother LPR Treiber]
     D --> E[CUPSwrapper Treiber]
