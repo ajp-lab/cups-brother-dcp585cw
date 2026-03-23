@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # 2. Pakete für SANE & Netzwerk
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    iputils-ping \
     sane \
     sane-utils \
     wget \
