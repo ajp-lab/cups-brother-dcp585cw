@@ -1,7 +1,20 @@
 #!/bin/bash
 echo "🚀 Start Container..."
-docker run -d --platform linux/386 --name brother-scan-test -p 54921:54921/udp -p 54925:54925/udp brother-scanner
-sleep 3 #Wait until driver is ready 
+mkdir -p ~/Desktop/Scans
+docker run -d --platform linux/amd64 --name brother-scan-test -v ~/Desktop/Scans:/output  brother-scanner
+sleep 2 #Wait until driver is ready 
+echo "Container started..."
 
 echo "📸 Scan doc..."
-docker exec -it brother-scan-test scanimage --device-name "brother3:net1;dev0" --format=tiff > scan_$(date +%Y%m%d_%H%M%S).tiff
+# Zeitstempel für den Dateinamen
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+FILENAME="scan_$TIMESTAMP.png"
+
+docker exec -it brother-scan-test scanimage --resolution 300 --format=png > ~/Desktop/Scans/$FILENAME
+
+# Check if OK
+if [ $? -eq 0 ]; then
+    echo "--- Scan successful! File saved under: ~/Desktop/Scans/$FILENAME ---"
+else
+    echo "--- Error: Scanner not reachable or other error. ---"
+fi
