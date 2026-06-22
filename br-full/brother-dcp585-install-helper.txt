@@ -1,0 +1,27 @@
+You are going to install following packages.
+   dcp585cwlpr-1.1.2-2.i386.deb
+   dcp585cwcupswrapper-1.1.2-2.i386.deb
+   brscan3-0.2.13-1.amd64.deb
+   brscan-skey-0.3.4-0.amd64.deb
+OK? [y/N] ->y
+
+Do you agree? [Y/n] ->Y
+
+Do you agree? [Y/n] ->Y
+
+After this operation, 15.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n]Y
+
+Will you specify the Device URI? [Y/n] ->Y
+
+select the number of destination Device URI. ->8
+
+enter IP address ->192.168.50.10
+
+Test Print? [y/N] ->N
+
+
+#Now scanner...
+Do you agree? [Y/n] ->Y
+
+Do you agree? [Y/n] ->Y
