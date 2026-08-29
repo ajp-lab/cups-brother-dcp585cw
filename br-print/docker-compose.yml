@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  cups-dcp585cw:
+    build: .
+    container_name: cups-dcp585cw
+    restart: unless-stopped
+    ports:
+      - "6310:631"
+    volumes:
+      - cups-config:/etc/cups
+      - cups-spool:/var/spool/cups
+
+volumes:
+  cups-config:
+  cups-spool:
