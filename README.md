@@ -16,7 +16,7 @@ graph TD
     D --> E[CUPSwrapper & 32-bit Decoder]
     end
     E -->|Network LPD / UDP| F[Brother DCP-585CW]
-
+```
 
 ## Prerequisites  
 Docker and Docker Compose installed.  
